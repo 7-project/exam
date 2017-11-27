@@ -73,7 +73,7 @@
 			$('#viewStudents').DataTable( {
 		        "ajax": {
 		        	
-		            "url": "http://localhost:8080/exam-system/json/students/all",
+		            "url": window.context + "/json/students/all",
 	                "cache": false,
 	                "dataSrc": "",
 		            "type": "GET"
