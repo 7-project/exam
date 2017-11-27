@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+
+
 public class MainController {
 
 	@RequestMapping(value = {"/", "/index", "/home"}, method = RequestMethod.GET)
@@ -18,4 +20,7 @@ public class MainController {
 		mv.addObject("message", "this is the main page");
 		return mv;
 	}
+	
+	
+	
 }

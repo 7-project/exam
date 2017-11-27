@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 	
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<c:set var="cp" value="${pageContext.request.contextPath}"/>
+  <c:set var="cp" scope="application">${pageContext.request.contextPath}</c:set>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +42,6 @@
 </head>
 <body>
   <!-- --------------------------------------  -->
-
 
 <!-- Black Dashboard below the top-navigation-bar -->
 <div class="container-fluid dashboard-container">

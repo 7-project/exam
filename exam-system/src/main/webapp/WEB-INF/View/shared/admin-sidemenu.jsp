@@ -4,7 +4,7 @@
     <div class="col-md-2 col-sm-1 col-lg-2 display-table-cell hidden-xs valign" id="side-menu">
       <ul>
         <li class="link active">
-          <a href="${cp } /home" class="main-color-bg">
+          <a href="${cp}/home" class="main-color-bg">
             <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
             <span class="hidden-xs hidden-sm">Dashboard</span>
           </a>
@@ -17,9 +17,10 @@
             <span class="caret pull-right"></span>
           </a>
           <ul class="collapse collapseable" id="collapse-post">
-            <li><a href="${cp }/addstudents" id="add-student">Add New</a></li>
-            <li><a href="${cp }/managestudents" id="manage-student">Manage</a></li>
-            <li><a href="${cp }/student-semester" id="Student-Semester">Student-Semester</a></li>
+          	<li><a href="student-management/students/view" id="add-student">View</a></li>
+            <li><a href="student-management/students/add" id="add-student">Add New</a></li>
+            <li><a href="student-management/students/managestudents" id="manage-student">Manage</a></li>
+            <li><a href="student-management/students/student-semester" id="Student-Semester">Student-Semester</a></li>
           </ul>
         </li>
         <li class="link">
