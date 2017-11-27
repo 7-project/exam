@@ -2,9 +2,15 @@ package com.project.exam.model;
 
 import java.sql.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
+@Entity
 public class StudentsModel {
 
+	@Id
 	private int s_id;
 	private String first_name;
 	private String middle_name;

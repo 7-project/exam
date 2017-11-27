@@ -3,6 +3,9 @@ package com.project.exam.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.project.exam.model.StudentsModel;
@@ -13,6 +16,8 @@ public class StudentDAOImpl implements StudentDAO {
 
 	private static List<StudentsModel> students = new ArrayList();
 	
+	@Autowired
+	private SessionFactory sessionFactory;
 	
 	@Override
 	public List<StudentsModel> getStudentList() {
@@ -35,8 +40,9 @@ public class StudentDAOImpl implements StudentDAO {
 
 	@Override
 	public StudentsModel addStudent(StudentsModel student) {
-		// TODO Auto-generated method stub
-		return null;
+		Session session= sessionFactory.getCurrentSession();
+		
+		return (StudentsModel) session.save(student);
 	}
 
 	@Override
