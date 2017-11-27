@@ -50,12 +50,12 @@
         </li>
         <!--====================================================================================  -->
           <li class="link">
-          <a href="#collapse-manage" data-toggle="collapse"  aria-controls="collapse-manage">
+          <a href="#collapse-exam" data-toggle="collapse"  aria-controls="collapse-exam">
             <span class="glyphicon glyphicon-pencil"></span>
             <span class="hidden-xs hidden-sm">Exam</span>
             <span class="caret pull-right"></span>
           </a>
-          <ul class="collapse collapseable" id="collapse-manage">
+          <ul class="collapse collapseable" id="collapse-exam">
             <li><a href="${cp }/addexam" id="addexam">Add Exam</a></li>
             <li><a href="${cp }/manageexam" id="manageexam">Manage Exam</a></li>
              <li><a href="${cp }/exam-type" id="exam-type">Exam-type</a></li>

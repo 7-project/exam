@@ -5,23 +5,38 @@
 
 <c:set var="cp" value="${pageContext.request.contextPath}"/>
 
-<spring:url var="css" value="/resources/css"></spring:url>
-<spring:url var="js" value="/resources/js"></spring:url>
-<spring:url var="images" value="/resources/images"></spring:url>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<spring:url value="/assets/css/bootstrap.min.css" var="bootstrap" />
+<spring:url value="/assets/css/style.css" var="style" />
+<spring:url value="/assets/css/style-responsive.css" var="styleresponsive" />
+<spring:url value="/assets/css/profile.css" var="profile" />
+
+<spring:url value="/assets/js/jquery-3.2.1.min.js" var="jqueryJs" />
+<spring:url value="/assets/js/bootstrap.min.js" var="bootstrapJs" />
+<spring:url value="/assets/js/default.js" var="defaultJs" />
+
+	
+	
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MIS</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="${css }/bootstrap.min.css" rel="stylesheet">
-  <link href="${css }style.css" rel="stylesheet">
-  <link href="${css }style-responsive.css" rel="stylesheet">
-  <link href="${css }/profile.css" rel="stylesheet">
+  <link href="${bootstrap }" rel="stylesheet">
+  <link href="${style }" rel="stylesheet">
+  <link href="${styleresponsive }" rel="stylesheet">
+  <link href="${profile}" rel="stylesheet">
+
+  <script src="${jqueryJs}"></script>
+
+
+<script src="${bootstrapJs}"></script>
+<script src="${defaultJs}"></script>
+</body>
 
 </head>
 <body>
