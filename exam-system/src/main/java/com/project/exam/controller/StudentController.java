@@ -15,7 +15,7 @@ import com.project.exam.services.StudentService;
 @RequestMapping("/student-management/student/*")
 public class StudentController {
 	
-	@Autowired 
+	
 	private StudentService studentService;
 	
 	 @RequestMapping("/all")

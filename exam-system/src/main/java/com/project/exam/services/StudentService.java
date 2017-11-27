@@ -2,7 +2,10 @@ package com.project.exam.services;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.project.exam.model.StudentsModel;
+
 
 public interface StudentService {
 	
