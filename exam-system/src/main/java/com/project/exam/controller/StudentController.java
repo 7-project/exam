@@ -21,7 +21,7 @@ public class StudentController {
 	 @RequestMapping("/view")
 	 public ModelAndView view() {
 			ModelAndView mv = new ModelAndView("student-management");
-			mv.addObject("student-view clicked", true);
+			mv.addObject("student-view-clicked", true);
 			mv.addObject("message", "the input form should be here");
 			return mv;
 		}
@@ -29,7 +29,7 @@ public class StudentController {
 	 @RequestMapping("/all")
 	 public ModelAndView all() {
 			ModelAndView mv = new ModelAndView("student-management");
-			mv.addObject("student-all clicked", true);
+			mv.addObject("student-all-clicked", true);
 			mv.addObject("all-students", studentService.getStudentList());
 			return mv;
 		}
@@ -37,7 +37,7 @@ public class StudentController {
 	  @RequestMapping(value="/save",method = RequestMethod.POST)  
 	    public ModelAndView save(@ModelAttribute("StudentModel") StudentsModel student){  
 			ModelAndView mv = new ModelAndView("student-management");
-			mv.addObject("student-save clicked", true);
+			mv.addObject("student-save-clicked", true);
 			mv.addObject("all-students", studentService.addStudent(student));
 			return mv;
 		}
@@ -46,7 +46,7 @@ public class StudentController {
 	 @RequestMapping("/delete")
 		public ModelAndView delete() {
 			ModelAndView mv = new ModelAndView("student-management");
-			mv.addObject("student-delete clicked", true);
+			mv.addObject("student-delete-clicked", true);
 			mv.addObject("message", "this is the main page");
 			return mv;
 		}

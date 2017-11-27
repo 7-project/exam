@@ -16,8 +16,10 @@
 
 
 			<!-- Content Area -->
+			
+			
 
-			<c:if test="${student-view clicked==true}">
+			<c:if test="${student-view-clicked==true}">
 				<h1>form to select student</h1>
 				<button>View all</button>
 			</c:if>
