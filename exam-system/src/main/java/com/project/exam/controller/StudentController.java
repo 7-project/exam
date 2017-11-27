@@ -33,7 +33,7 @@ public class StudentController {
 	public ModelAndView all() {
 		ModelAndView mv = new ModelAndView("student-management");
 		mv.addObject("student_all_requested", true);
-		mv.addObject("message", "the input form should be here");
+		mv.addObject("message", "all records of student requested");
 		return mv;
 	}
 	
@@ -42,7 +42,6 @@ public class StudentController {
 	public ModelAndView addNew() {
 		ModelAndView mv = new ModelAndView("student-management");
 		mv.addObject("student_addNew_clicked", true);
-		mv.addObject("result", studentService.getStudentList());
 		mv.addObject("message", "the input form should be here");
 		return mv;
 	}
@@ -55,12 +54,7 @@ public class StudentController {
 		return mv;
 	}
 
-	@RequestMapping(value = "/students/all", method = RequestMethod.GET)
-	@ResponseBody
-	public List<StudentsModel> getStudentList() {
-		return studentService.getStudentList();
-
-	}
+	
 
 	@RequestMapping(value = "student/add", method = RequestMethod.POST)
 	public ModelAndView save(@ModelAttribute("StudentModel") StudentsModel student) {
