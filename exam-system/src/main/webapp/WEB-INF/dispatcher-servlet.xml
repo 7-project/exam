@@ -2,6 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="
     http://www.springframework.org/schema/beans     
@@ -9,7 +10,9 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context-3.0.xsd
     http://www.springframework.org/schema/mvc
-    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+    http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 <context:annotation-config></context:annotation-config>
 	<context:component-scan base-package="com.project.exam"></context:component-scan>
@@ -18,6 +21,36 @@
 	<context:component-scan base-package="com.project.exam.model" />
 	<context:component-scan base-package="com.project.exam.service" />
 	
+	
+	<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+<property name="driverClass" value="com.mysql.jdbc.Driver" />
+	<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/exam_info_db" />
+	<property name="user" value="root" />
+	<property name="password" value="" />
+		
+	<property name="minPoolSize" value="3" />
+	<property name="maxPoolSize" value="10" />
+	<property name="maxIdleTime" value="30000" />
+	</bean>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="myDataSource" />
+		<property name="packagesToScan" value="com.maushra.feedback.entity" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+</bean>
+
+
+<bean id="myTransactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+	<property name="sessionFactory" ref="sessionFactory" />
+</bean>
+	
+<tx:annotation-driven transaction-manager="myTransactionManager" />
+
 	<!-- for loading static resources inside assets folder -->
 	  <mvc:resources mapping="/resources/**" location="/assets/" />
 	<mvc:annotation-driven />

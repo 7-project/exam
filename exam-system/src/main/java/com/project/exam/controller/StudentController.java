@@ -42,6 +42,7 @@ public class StudentController {
 	public ModelAndView addNew() {
 		ModelAndView mv = new ModelAndView("student-management");
 		mv.addObject("student_addNew_clicked", true);
+		mv.addObject("result", studentService.getStudentList());
 		mv.addObject("message", "the input form should be here");
 		return mv;
 	}
