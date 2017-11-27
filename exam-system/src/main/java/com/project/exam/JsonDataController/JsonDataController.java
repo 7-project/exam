@@ -12,13 +12,13 @@ import com.project.exam.model.StudentsModel;
 import com.project.exam.services.StudentService;
 
 @Controller
-@RequestMapping("/json/data")
+@RequestMapping("/json")
 public class JsonDataController {
 
 	@Autowired
 	private StudentService studentService;
 	
-	@RequestMapping(value = "/json/students/all", method = RequestMethod.GET)
+	@RequestMapping(value = "/students/all", method = RequestMethod.GET)
 	@ResponseBody
 	public List<StudentsModel> getStudentList() {
 		return studentService.getStudentList();

@@ -10,6 +10,24 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 public class StudentsModel {
 
+	public StudentsModel() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public StudentsModel(int s_id, String first_name, String middle_name, String last_name, String date_of_birth,
+			int phone, String address, String city, String district, String zipcode) {
+		super();
+		this.s_id = s_id;
+		this.first_name = first_name;
+		this.middle_name = middle_name;
+		this.last_name = last_name;
+		this.date_of_birth = date_of_birth;
+		this.phone = phone;
+		this.address = address;
+		this.city = city;
+		this.district = district;
+		this.zipcode = zipcode;
+	}
 	@Id
 	private int s_id;
 	private String first_name;

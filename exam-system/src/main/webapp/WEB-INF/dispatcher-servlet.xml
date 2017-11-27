@@ -16,6 +16,7 @@
 
 <context:annotation-config></context:annotation-config>
 	<context:component-scan base-package="com.project.exam"></context:component-scan>
+	<context:component-scan base-package="com.project.exam.JsonDataController" />
 	<context:component-scan base-package="com.project.exam.controller" />
 	<context:component-scan base-package="com.project.exam.dao" />
 	<context:component-scan base-package="com.project.exam.model" />
@@ -38,7 +39,8 @@
 		<property name="packagesToScan" value="com.project.exam.model" />
 		<property name="hibernateProperties">
 			<props>
-				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				 <prop key="hibernate.hbm2ddl.auto">update</prop>
 				<prop key="hibernate.show_sql">true</prop>
 			</props>
 		</property>
