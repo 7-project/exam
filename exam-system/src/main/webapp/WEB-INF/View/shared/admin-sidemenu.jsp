@@ -17,10 +17,10 @@
             <span class="caret pull-right"></span>
           </a>
           <ul class="collapse collapseable" id="collapse-post">
-          	<li><a href="student-management/students/view" id="add-student">View</a></li>
-            <li><a href="student-management/students/add" id="add-student">Add New</a></li>
-            <li><a href="student-management/students/managestudents" id="manage-student">Manage</a></li>
-            <li><a href="student-management/students/student-semester" id="Student-Semester">Student-Semester</a></li>
+          	<li><a href="student-management/view" id="add-student">View</a></li>
+            <li><a href="student-management/add" id="add-student">Add New</a></li>
+            <li><a href="student-management/managestudents" id="manage-student">Manage</a></li>
+            <li><a href="student-management/student-semester" id="Student-Semester">Student-Semester</a></li>
           </ul>
         </li>
         <li class="link">

@@ -12,16 +12,24 @@ import com.project.exam.model.StudentsModel;
 import com.project.exam.services.StudentService;
 
 @Controller
-@RequestMapping("/student-management/student/*")
+@RequestMapping("/student-management/*")
 public class StudentController {
 	
 	
 	private StudentService studentService;
 	
+	 @RequestMapping("/view")
+	 public ModelAndView view() {
+			ModelAndView mv = new ModelAndView("student-management");
+			mv.addObject("student-view clicked", true);
+			mv.addObject("message", "the input form should be here");
+			return mv;
+		}
+	
 	 @RequestMapping("/all")
 	 public ModelAndView all() {
 			ModelAndView mv = new ModelAndView("student-management");
-			mv.addObject("student-view clicked", true);
+			mv.addObject("student-all clicked", true);
 			mv.addObject("all-students", studentService.getStudentList());
 			return mv;
 		}
