@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.project.exam.model.StudentsModel;
 
-@Repository
+@Repository("studentDao")
 
 public class StudentDAOImpl implements StudentDAO {
 

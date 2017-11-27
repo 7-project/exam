@@ -17,10 +17,9 @@
             <span class="caret pull-right"></span>
           </a>
           <ul class="collapse collapseable" id="collapse-post">
-          	<li><a href="student-management/view" id="add-student">View</a></li>
-            <li><a href="student-management/add" id="add-student">Add New</a></li>
-            <li><a href="student-management/managestudents" id="manage-student">Manage</a></li>
-            <li><a href="student-management/student-semester" id="Student-Semester">Student-Semester</a></li>
+          	<li><a href="${cp }/student-management/view" id="view-student">View</a></li>
+            <li><a href="${cp }/student-management/addNew" id="add-student">Add New</a></li>
+            <li><a href="${cp }/student-management/studentSemester" id="Student-Semester">Student-Semester</a></li>
           </ul>
         </li>
         <li class="link">
@@ -30,9 +29,9 @@
             <span class="caret pull-right"></span>
           </a>
           <ul class="collapse collapseable" id="collapse-comments">
-            <li><a href="${cp }addsubject" id="add-staff">Add New</a></li>
-            <li><a href="${cp }/managesubject" id="manage-staff">Manage</a></li>
-            <li><a href="${cp }/semester-subject" id="Semester-Subject">Semester-Subject</a></li>
+            <li><a href="${cp }/subject-management/view" id="view-subject">View</a></li>
+            <li><a href="${cp }/subject-management/addNew" id="add-subject">Add New</a></li>
+            <li><a href="${cp }/subject-management/subjectSemester" id="Subject-Semester">Subject-Semester</a></li>
           </ul>
         </li>
 

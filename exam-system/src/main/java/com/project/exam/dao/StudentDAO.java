@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.project.exam.model.StudentsModel;
 
-@Repository("studentDao")
+
 public interface StudentDAO {
 	
 	public List<StudentsModel> getStudentList();
