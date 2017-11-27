@@ -16,8 +16,11 @@ public class StudentDAOImpl implements StudentDAO {
 	
 	@Override
 	public List<StudentsModel> getStudentList() {
+		StudentsModel m= new StudentsModel();
+		m.setAddress("ktm");
+		System.out.println("hhhhhhhhhhhhhhhhhhhhhhhhh");
+		return (List<StudentsModel>) m;
 		
-		return null;
 	}
 
 	@Override

@@ -2,7 +2,6 @@ package com.project.exam.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,11 +10,12 @@ import org.springframework.web.servlet.ModelAndView;
 import com.project.exam.model.StudentsModel;
 import com.project.exam.services.StudentService;
 
+
 @Controller
 @RequestMapping("/student-management")
 public class StudentController {
 	
-	
+	@Autowired
 	private StudentService studentService;
 	
 	 @RequestMapping("/view")

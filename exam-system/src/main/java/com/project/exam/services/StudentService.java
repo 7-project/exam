@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 import com.project.exam.model.StudentsModel;
 
-
+@Component
 public interface StudentService {
 	
 	public List<StudentsModel> getStudentList();
