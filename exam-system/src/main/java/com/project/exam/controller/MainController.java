@@ -20,7 +20,7 @@ public class MainController {
 		mv.addObject("message", "this is the main page");
 		return mv;
 	}
-	
+	 
 	
 	
 }

@@ -22,6 +22,8 @@ public class StudentDAOImpl implements StudentDAO {
 	@Override
 	public List<StudentsModel> getStudentList() {
 		StudentsModel m= new StudentsModel();
+		StudentsModel m1= new StudentsModel();
+		
 		m.setS_id(1);
 		m.setFirst_name("shrawan");
 		m.setMiddle_name("");
@@ -31,8 +33,22 @@ public class StudentDAOImpl implements StudentDAO {
 		m.setAddress("street 7");
 		m.setCity("ktm");
 		m.setDistrict("ktm");
+		m.setZipcode("55670");
 		
 		students.add(m);
+		
+		
+		m1.setS_id(1);
+		m1.setFirst_name("mausam");
+		m1.setMiddle_name("");
+		m1.setLast_name("Rayamajhi");
+		m1.setDate_of_birth("1997-01-01");
+		m1.setPhone(55555);
+		m1.setAddress("street 8");
+		m1.setCity("ktm");
+		m1.setDistrict("ktm");
+		m1.setZipcode("55670");
+		students.add(m1);
 		System.out.println("hhhhhhhhhhhhhhhhhhhhhhhhh");
 		return  students;
 		

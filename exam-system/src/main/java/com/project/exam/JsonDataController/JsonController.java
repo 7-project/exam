@@ -13,7 +13,7 @@ import com.project.exam.services.StudentService;
 
 @Controller
 @RequestMapping("/json")
-public class JsonDataController {
+public class JsonController {
 
 	@Autowired
 	private StudentService studentService;

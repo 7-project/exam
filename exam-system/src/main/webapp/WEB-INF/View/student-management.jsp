@@ -4,7 +4,7 @@
 	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<jsp:include page="./shared/header.jsp" />
+<jsp:include page="shared/header.jsp" />
 
 <body>
 
@@ -16,7 +16,7 @@
 			<h1>
 				-> form to select student or
 				<button>
-					<a href="${cp }/student-management/view/all">View ALl Student </a>
+					<a href="${cp }/student-management/view/all" id=#studentAll>View All Students </a>
 				</button>
 			</h1>
 		</c:if>
@@ -36,20 +36,14 @@
 
 
 		<c:if test="${student_all_requested == true}">
-
-			<script>
-				window.student = '';
-			</script>
-
-			<table id="viewStudent"
-				class="table table-striped table-bordered table-responsive">
+    <table id="viewStudents" class="table table-striped table-bordered" cellspacing="0" width="100%">
 				<thead>
-					<tr>
-						<th>s-Id</th>
+					<tr> 
+						<th>s-id</th>
 						<th>first_name</th>
 						<th>middle_name</th>
 						<th>last_name</th>
-						<th>Date_of_birth</th>
+						<th>date_of_birth</th>
 						<th>phone</th>
 						<th>address</th>
 						<th>city</th>
@@ -59,11 +53,11 @@
 				</thead>
 				<tfoot>
 					<tr>
-						<th>s-Id</th>
+						<th>s_id</th>
 						<th>first_name</th>
 						<th>middle_name</th>
 						<th>last_name</th>
-						<th>Date_of_birth</th>
+						<th>date_of_birth</th>
 						<th>phone</th>
 						<th>address</th>
 						<th>city</th>
@@ -71,16 +65,37 @@
 						<th>zipcode</th>
 					</tr>
 				</tfoot>
-				
-				
+				 
 			</table>
-
 			
+			<script>
+
+			$('#viewStudents').DataTable( {
+		        "ajax": {
+		        	
+		            "url": "http://localhost:8080/exam-system/json/students/all",
+	                "cache": false,
+	                "dataSrc": "",
+		            "type": "GET"
+		        },
+		        "columns": [
+		        	{ "data": "s_id" },
+		            { "data": "first_name" },
+		            { "data": "middle_name" },
+		            { "data": "last_name" },
+		            { "data": "date_of_birth" },
+		            { "data": "phone" },
+		            { "data": "address" },
+		            { "data": "city" },
+		            { "data": "district" },
+		            { "data": "zipcode" },
+		        ]
+		    } );
+			
+			</script>
 		</c:if>
 
 
 	</div>
 
-
-
-	<jsp:include page="./shared/footer.jsp" />>
+	<jsp:include page="shared/footer.jsp" />
