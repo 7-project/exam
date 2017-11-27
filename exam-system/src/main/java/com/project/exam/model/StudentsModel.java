@@ -9,7 +9,7 @@ public class StudentsModel {
 	private String first_name;
 	private String middle_name;
 	private String last_name;
-	private Date date_of_birth;
+	private String date_of_birth;
 	private int phone;
 	private String address;
 	private String city;
@@ -41,10 +41,10 @@ public class StudentsModel {
 	public void setLast_name(String last_name) {
 		this.last_name = last_name;
 	}
-	public Date getDate_of_birth() {
+	public String getDate_of_birth() {
 		return date_of_birth;
 	}
-	public void setDate_of_birth(Date date_of_birth) {
+	public void setDate_of_birth(String date_of_birth) {
 		this.date_of_birth = date_of_birth;
 	}
 	public int getPhone() {
@@ -78,6 +78,7 @@ public class StudentsModel {
 		this.zipcode = zipcode;
 	}
 	
+
 	
 	
 }

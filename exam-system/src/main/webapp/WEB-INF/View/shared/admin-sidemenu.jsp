@@ -1,7 +1,7 @@
 
 
 <!-- Side Menu -->
-    <div class="col-md-2 col-sm-1 col-lg-2 display-table-cell hidden-xs valign" id="side-menu">
+    <div id="side-menu">
       <ul>
         <li class="link active">
           <a href="${cp}/home" class="main-color-bg">

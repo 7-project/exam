@@ -7,23 +7,15 @@
 <jsp:include page="./shared/header.jsp" />
 
 <body>
-
-	<div class="container-fluid display-table ">
-
-		<div class="row display-table-row col-lg-12  ">
-
-			<jsp:include page="./shared/admin-sidemenu.jsp" />
-
-
-			<!-- Content Area -->
-
+        
+        <!-- Content Area -->
+        <div id="page-content-wrapper">
+          
 			<c:if test="${homeClicked==true}">
 				<%@ include file="admin-dashboard.jsp"%>
 			</c:if>
-
-
-		</div>
-	</div>
-
+         
+    </div>
+    
 
 	<jsp:include page="./shared/footer.jsp" />
